@@ -8,7 +8,7 @@
         state: present
       ignore_errors: yes
     - name: Install docker
-      ansible.builin.dnf:
+      ansible.builtin.dnf:
         name: docker
         state: present
         allowerasing: yes

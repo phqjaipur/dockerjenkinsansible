@@ -4,12 +4,14 @@
   tasks:
     - name: Install python pip
       yum:
-        name: python-pip
+        name: python3-pip
         state: present
+        ignore_errors: yes
     - name: Install docker
-      yum:
+      ansible.builin.dnf:
         name: docker
         state: present
+        allowerasing: yes
     - name: start docker
       service:
         name: docker
